@@ -1,0 +1,71 @@
+html, body {
+  height: 100%;
+  margin: 0;}
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#001f3f;
+    }
+
+li {
+float: right;
+  }
+  .active {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:inherit;
+    font-style:oblique;
+    font-size: 1.5vw;
+}
+
+li a {
+display: block;
+color: #7FDBFF;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 1.5vw;
+}
+.object {
+background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url(flag.jpg);
+background-size: cover;
+width: 100%;
+height: 890px;
+position:relative;
+float: left;
+
+}
+.cap #body_content {
+padding: 20px;
+padding-bottom: 50px;
+color: white;
+font: 12px Monaco, Mono-Space;
+margin: 0;
+text-align:center;
+height: 100%;
+font-size: 2.3vw;
+margin-left: 25%;
+margin-right: 25%;
+margin-top: 0%;
+
+}
+.footer{
+ height: 50px;
+ margin-top: -50px;
+ background-color:#001f3f;
+}
+footer #footer_content {
+background:#001f3f;
+color: #7FDBFF;
+line-height: 50px;
+padding: 0 20px;
+}
