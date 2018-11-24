@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>
+        iReporter
+     </title>
+     <link rel="stylesheet"href="style2.css">
+     <script>
+     function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+     </script>
+     <ul>
+      <li><a href="index.html">IReporter</a></li>
+    </ul
+   </head>
+   <body>
+     <div class="tab">
+<button class="tablinks" onclick="openCity(event, 'General')" id="defaultOpen">General</button>
+<button class="tablinks" onclick="openCity(event, 'Resolved')">Resolved rec.</button>
+<button class="tablinks" onclick="openCity(event, 'investigation')">Under investigation</button>
+<button class="tablinks" onclick="openCity(event, 'Draft')">Draft</button>
+<button class="tablinks" onclick="openCity(event, 'rejected')">Rejected</button>
+<button class="tablinks" onclick="openCity(event, 'all_rec')">All records</button>
+<button class="tablinks" onclick="openCity(event, 'red-flag')">New red-flag</button>
+<button class="tablinks" onclick="openCity(event, 'intervention')">new intervention</button>
+</div>
+
+<div id="General" class="tabcontent">
+<h3>When and where to raise a red-flg or call for intervention</h3>
+<p>You create a red-flag record only when reporting fo an incident linked to corruption. On the other hand create intervention record (a call for a government agency to intervene e.g
+repair bad road sections, collapsed bridges, flooding e.t.c).</p>
+</div>
+
+<div id="Resolved" class="tabcontent">
+<h4>The following records have been resolved:</h4>
+<table>
+<tr>
+<th>Place</th>
+<th>Category</th>
+<th>other description</th>
+</tr>
+<tr>
+<td><input name="place"></td>
+<td><input name="category"></td>
+<td><input name="other des"></td>
+</tr>
+<tr>
+<td><input name="place"></td>
+<td><input name="category"></td>
+<td><input name="other des"></td>
+
+</tr>
+<tr>
+<td><input name="place"></td>
+<td><input name="category"></td>
+<td><input name="other des"></td>
+
+</tr>
+<tr>
+<td><input name="place"></td>
+<td><input name="category"></td>
+<td><input name="other des"></td>
+</tr>
+</table>
+</div>
+
+<div id="investigation" class="tabcontent">
+  <h4>The following records are still under investigation</h4>
+  <table>
+<tr>
+  <th>Place</th>
+  <th>Category</th>
+  <th>other descriptin</th>
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+</tr>
+</table>
+</div>
+<div id="Draft" class="tabcontent">
+  <h4>The following records yet resolved:</h4>
+  <table>
+<tr>
+  <th>Place</th>
+  <th>Category</th>
+  <th>other descriptin</th>
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+</tr>
+</table>
+</div>
+<div id="rejected" class="tabcontent">
+  <h4>The following records have been rejected:</h4>
+  <table>
+<tr>
+  <th>Place</th>
+  <th>Category</th>
+  <th>other descriptin</th>
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+</tr>
+</table>
+</div>
+<div id="all_rec" class="tabcontent">
+  <h4>List of all your records:</h4>
+  <table>
+<tr>
+  <th>Place</th>
+  <th>Category</th>
+  <th>other descriptin</th>
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+
+</tr>
+<tr>
+  <td><input name="place"></td>
+  <td><input name="category"></td>
+  <td><input name="other des"></td>
+</tr>
+</table>
+</div>
+<div id="red-flag" class="tabcontent">
+  <h4>Create a new red-flag record:</h4>
+  <div class="container">
+    <form>
+      <label for="fname">Location</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Category</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <p>Write the description</p>
+      <textarea id="subject" name="subject" placeholder="Describe the incident" style="height:150px"></textarea>
+      <input id = "file" value="ffile"type="file" style="height:30px">
+      <input type="submit" value="Submit">
+    </form>
+</div>
+</div>
+<div id="intervention" class="tabcontent">
+  <h4>Create a new intervention record:</h4>
+    <form>
+      <label for="fname">Location</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Category</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <p>Write the description</p>
+      <textarea id="subject" name="subject" placeholder="Describe the incident" style="height:150px"></textarea
+      <input id = "file" value="ffile"type="file" style="height:30px">
+      <input type="submit" value="Submit">
+    </form>
+</div>
+   </body>
