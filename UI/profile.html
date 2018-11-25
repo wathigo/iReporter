@@ -5,7 +5,7 @@
       <title>
         iReporter
      </title>
-     <link rel="stylesheet"href="style2.css">
+     <link rel="stylesheet"href="style.css">
      <script>
      function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
@@ -20,21 +20,32 @@
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+var x = document.getElementById("location");
 
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen").click()
      </script>
      <ul>
       <li><a href="index.html">IReporter</a></li>
     </ul
    </head>
+   <div id="profile">
    <body>
      <div class="tab">
 <button class="tablinks" onclick="openCity(event, 'General')" id="defaultOpen">General</button>
-<button class="tablinks" onclick="openCity(event, 'Resolved')">Resolved rec.</button>
-<button class="tablinks" onclick="openCity(event, 'investigation')">Under investigation</button>
-<button class="tablinks" onclick="openCity(event, 'Draft')">Draft</button>
-<button class="tablinks" onclick="openCity(event, 'rejected')">Rejected</button>
+<button class="tablinks" onclick="openCity(event, 'statistics')">Records statics</button>
 <button class="tablinks" onclick="openCity(event, 'all_rec')">All records</button>
 <button class="tablinks" onclick="openCity(event, 'red-flag')">New red-flag</button>
 <button class="tablinks" onclick="openCity(event, 'intervention')">new intervention</button>
@@ -46,164 +57,87 @@ document.getElementById("defaultOpen").click();
 repair bad road sections, collapsed bridges, flooding e.t.c).</p>
 </div>
 
-<div id="Resolved" class="tabcontent">
-<h4>The following records have been resolved:</h4>
+<div id="all_rec" class="tabcontent">
+<h4>All my records:</h4>
 <table>
 <tr>
-<th>Place</th>
+<th>type</th>
+<th>status</th>
 <th>Category</th>
-<th>other description</th>
+<th>other descriptions</th>
 </tr>
 <tr>
-<td><input name="place"></td>
+<td><input name="type"></td>
+<td><select>
+  <option value="volvo">Resolved</option>
+  <option value="saab">Draft</option>
+  <option value="rejected"></option>
+</select></td>
 <td><input name="category"></td>
-<td><input name="other des"></td>
+<td><input name="other_description"></td>
 </tr>
 <tr>
-<td><input name="place"></td>
-<td><input name="category"></td>
-<td><input name="other des"></td>
-
+  <td><input name="type"></td>
+  <td><select>
+    <option value="volvo">Resolved</option>
+    <option value="saab">Draft</option>
+    <option value="rejected"></option>
+</select></td>
+  <td><input name="category"></td>
+  <td><input name="other_description"></td>
 </tr>
 <tr>
-<td><input name="place"></td>
-<td><input name="category"></td>
-<td><input name="other des"></td>
-
+    <td><input name="type"></td>
+  <td><select>
+    <option value="volvo">Resolved</option>
+    <option value="saab">Draft</option>
+    <option value="rejected"></option>
+</select><select>
+  <option value="volvo">Resolved</option>
+  <option value="saab">Draft</option>
+  <option value="rejected"></option>
+</select></td>
+  <td><input name="category"></td>
+  <td><input name="other_description"></td>
 </tr>
 <tr>
-<td><input name="place"></td>
-<td><input name="category"></td>
-<td><input name="other des"></td>
+  <td><input name="type"></td>
+  <td><select>
+    <option value="volvo">Resolved</option>
+    <option value="saab">Draft</option>
+    <option value="rejected"></option>
+</select></td>
+  <td><input name="category"></td>
+  <td><input name="other_description"></td>
 </tr>
 </table>
 </div>
-
-<div id="investigation" class="tabcontent">
-  <h4>The following records are still under investigation</h4>
+<div id="statistics" class="tabcontent">
+  <h4>Records created statistics:</h4>
   <table>
 <tr>
-  <th>Place</th>
-  <th>Category</th>
-  <th>other descriptin</th>
+  <th>type</th>
+  <th>status</th>
+  <th>No. of records</th>
 </tr>
 <tr>
   <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
+  <td><input name="status"></td>
+  <td><input name="no_of_records"></td>
 </tr>
 <tr>
   <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-
+  <td><input name="status"></td>
+  <td><input name="no_of_records"></td>
 </tr>
 <tr>
   <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-
-</tr>
+  <td><input name="status"></td>
+  <td><input name="no_of_records"></td></tr>
 <tr>
   <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-</tr>
-</table>
-</div>
-<div id="Draft" class="tabcontent">
-  <h4>The following records yet resolved:</h4>
-  <table>
-<tr>
-  <th>Place</th>
-  <th>Category</th>
-  <th>other descriptin</th>
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-</tr>
-</table>
-</div>
-<div id="rejected" class="tabcontent">
-  <h4>The following records have been rejected:</h4>
-  <table>
-<tr>
-  <th>Place</th>
-  <th>Category</th>
-  <th>other descriptin</th>
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-</tr>
-</table>
-</div>
-<div id="all_rec" class="tabcontent">
-  <h4>List of all your records:</h4>
-  <table>
-<tr>
-  <th>Place</th>
-  <th>Category</th>
-  <th>other descriptin</th>
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
-
-</tr>
-<tr>
-  <td><input name="place"></td>
-  <td><input name="category"></td>
-  <td><input name="other des"></td>
+  <td><input name="status"></td>
+  <td><input name="no_of_records"></td>
 </tr>
 </table>
 </div>
@@ -212,31 +146,48 @@ repair bad road sections, collapsed bridges, flooding e.t.c).</p>
   <div class="container">
     <form>
       <label for="fname">Location</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input type="text" name="firstname" placeholder="Your locaqtion..">
 
       <label for="lname">Category</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <input type="text" id="lname" name="lastname" placeholder="Category..">
 
       <p>Write the description</p>
-      <textarea id="subject" name="subject" placeholder="Describe the incident" style="height:150px"></textarea>
-      <input id = "file" value="ffile"type="file" style="height:30px">
+      <textarea id="subject" name="subject" placeholder="Describe the incident"></textarea>
+      <div id="upload">
+        <p>Add an image:<p>
+      <input id = "image" value="ffile"type="file"accept="image/*" >
+      <label for="video">Add a video:</label>
+      <input id = "video" value="ffile"type="file"accept="video/*" >
+    </div>
+
+    <button id="geo" onclick="getLocation()">get location</button>
+      <p id="location">Am here</p>
       <input type="submit" value="Submit">
     </form>
 </div>
 </div>
 <div id="intervention" class="tabcontent">
   <h4>Create a new intervention record:</h4>
-    <form>
+    <form><div id="interv_body">
       <label for="fname">Location</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input type="text" name="firstname" placeholder="Your name..">
 
       <label for="lname">Category</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <input type="text" name="lastname" placeholder="Your last name..">
 
       <p>Write the description</p>
-      <textarea id="subject" name="subject" placeholder="Describe the incident" style="height:150px"></textarea
-      <input id = "file" value="ffile"type="file" style="height:30px">
-      <input type="submit" value="Submit">
+      <textarea name="subject" placeholder="Describe the incident"></textarea
+        <div id="iupload">
+          <p>Add an image:<p>
+        <input value="ffile"type="file"accept="image/*" >
+        <label for="video">Add a video:</label>
+        <input value="ffile"type="file"accept="video/*" >
+      <button id="leo" onclick="getLocation()">get location</button>
+        <p id="location">Am here</p>
+        <input type="submit" value="Submit">
+      </div></div>
     </form>
 </div>
    </body>
+</div>
+</html>
