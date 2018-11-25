@@ -1,7 +1,9 @@
-html, body {
+/*homepage css rules*/
+
+#index body {
   height: 100%;
   margin: 0;}
- ul {
+ #index ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -9,28 +11,33 @@ html, body {
   background-color:#001f3f;
     }
 
- /*li {
+ #left li {
 float:left;
-  }*/
-  .active {
+padding: 14px 16px;
+color: #7FDBFF;
+text-align: center;
+  }
+  #right li a{
+    float:right;
+  }
+  #index .active {
     display: block;
     color: #FFFFFF;
     text-align: center;
     padding: 14px 16px;
     text-decoration:inherit;
     font-style:oblique;
-    font-size: 1.5vw;
+    font-size: 1.5vw
 }
 
-#sign li a{
+ #index li a{
 display: block;
 color: #7FDBFF;
 text-align: center;
 padding: 14px 16px;
 text-decoration: none;
-font-size: 1.5vw;
 }
-.object{
+#index .object{
 background:
   linear-gradient(
     rgba(0, 0, 0, 0.5),
@@ -44,7 +51,7 @@ position:relative;
 float: left;
 
 }
-.cap #body_content {
+#index .cap #body_content {
 padding: 20px;
 padding-bottom: 50px;
 color: white;
@@ -58,11 +65,17 @@ margin-right: 25%;
 margin-top: 0%;
 
 }
-.footer{
+#index #butt{
+  background-color: white;
+  color: black;
+  height: 75px;
+  width: 150px;
+}
+#index .footer{
  height: 50px;
  background-color:#001f3f;
 }
-footer #footer_content {
+#index footer #footer_content {
 background:#001f3f;
 color: #7FDBFF;
 line-height: 50px;
