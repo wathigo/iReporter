@@ -189,15 +189,15 @@ ul {
   }
   #profile .tab {
 float: left;
-border: 1-px solid #ccc;
 background-color: #111111;
 width: 20%;
-height: 800px;
+height: 200px;
 }
 
 /* Style the buttons inside the tab */
 #profile .tab button {
 display: block;
+margin: 0px;
 background-color: inherit;
 color: black;
 padding: 22px 16px;
@@ -224,12 +224,12 @@ background-color: #0074D9;
 /* Style the tab content */
 #profile .tabcontent {
 display: block;
+height: 800px;
 align-items: center;
 float: left;
 color: #FFFFFF;
 border: 1-px solid #ccc;
 width: 80%;
-height: 800px;
 background:
  linear-gradient(
    rgba(0, 0, 0, 0.5),
@@ -292,8 +292,7 @@ margin-top: 6px;
 margin-bottom: 16px;
 resize: vertical;
 }
-
-#profile input[type=submit] {
+#profile input[t4ype=submit] {
 background-color: #001f3f;
 color: white;
 padding: 12px 20px;
