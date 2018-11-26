@@ -6,37 +6,7 @@
         iReporter
      </title>
      <link rel="stylesheet"href="style.css">
-     <script>
-     function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-var x = document.getElementById("location");
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click()
-     </script>
      <ul>
       <li><a href="index.html">IReporter</a></li>
     </ul
@@ -69,9 +39,9 @@ repair bad road sections, collapsed bridges, flooding e.t.c).</p>
 <tr>
 <td><input name="type"></td>
 <td><select>
-  <option value="volvo">Resolved</option>
-  <option value="saab">Draft</option>
-  <option value="rejected"></option>
+  <option value="Resolved">Resolved</option>
+  <option value="Draft">Draft</option>
+  <option value="rejected">rejected</option>
 </select></td>
 <td><input name="category"></td>
 <td><input name="other_description"></td>
@@ -79,9 +49,9 @@ repair bad road sections, collapsed bridges, flooding e.t.c).</p>
 <tr>
   <td><input name="type"></td>
   <td><select>
-    <option value="volvo">Resolved</option>
-    <option value="saab">Draft</option>
-    <option value="rejected"></option>
+  <option value="Resolved">Resolved</option>
+  <option value="Draft">Draft</option>
+  <option value="rejected">rejected</option>
 </select></td>
   <td><input name="category"></td>
   <td><input name="other_description"></td>
@@ -89,13 +59,13 @@ repair bad road sections, collapsed bridges, flooding e.t.c).</p>
 <tr>
     <td><input name="type"></td>
   <td><select>
-    <option value="volvo">Resolved</option>
-    <option value="saab">Draft</option>
-    <option value="rejected"></option>
+  <option value="Resolved">Resolved</option>
+  <option value="Draft">Draft</option>
+  <option value="rejected">rejected</option>
 </select><select>
-  <option value="volvo">Resolved</option>
-  <option value="saab">Draft</option>
-  <option value="rejected"></option>
+  <option value="Resolved">Resolved</option>
+  <option value="Draft">Draft</option>
+  <option value="rejected">rejected</option>
 </select></td>
   <td><input name="category"></td>
   <td><input name="other_description"></td>
@@ -103,9 +73,9 @@ repair bad road sections, collapsed bridges, flooding e.t.c).</p>
 <tr>
   <td><input name="type"></td>
   <td><select>
-    <option value="volvo">Resolved</option>
-    <option value="saab">Draft</option>
-    <option value="rejected"></option>
+   <option value="Resolved">Resolved</option>
+  <option value="Draft">Draft</option>
+  <option value="rejected">rejected</option>
 </select></td>
   <td><input name="category"></td>
   <td><input name="other_description"></td>
@@ -146,10 +116,10 @@ repair bad road sections, collapsed bridges, flooding e.t.c).</p>
   <div class="container">
     <form>
       <label for="fname">Location</label>
-      <input type="text" name="firstname" placeholder="Your locaqtion..">
+      <input type="text" placeholder="Your location..">
 
       <label for="lname">Category</label>
-      <input type="text" id="lname" name="lastname" placeholder="Category..">
+      <input type="text" id="lname" placeholder="Category..">
 
       <p>Write the description</p>
       <textarea id="subject" name="subject" placeholder="Describe the incident"></textarea>
@@ -170,10 +140,10 @@ repair bad road sections, collapsed bridges, flooding e.t.c).</p>
   <h4>Create a new intervention record:</h4>
     <form><div id="interv_body">
       <label for="fname">Location</label>
-      <input type="text" name="firstname" placeholder="Your name..">
+      <input type="text" name="firstname" placeholder="Your location..">
 
       <label for="lname">Category</label>
-      <input type="text" name="lastname" placeholder="Your last name..">
+      <input type="text"  placeholder="Category..">
 
       <p>Write the description</p>
       <textarea name="subject" placeholder="Describe the incident"></textarea
@@ -188,6 +158,37 @@ repair bad road sections, collapsed bridges, flooding e.t.c).</p>
       </div></div>
     </form>
 </div>
+     <script>
+     function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+var x = document.getElementById("location");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click()
+     </script>
    </body>
 </div>
 </html>
